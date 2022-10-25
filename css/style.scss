@@ -1,0 +1,850 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@import url(/xiaomi_landing/css/slick.scss);
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #131313;
+}
+
+// header
+
+.header {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 97px;
+    }
+}
+
+.menu {
+    margin-right: 70px;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    &__link {
+
+        font-size: 14px;
+        padding: 43px 20px;
+        
+        transition: all 0.4s;
+
+        &:hover {
+            background-color: #131313;
+            color: white;
+        }
+    }
+}   
+
+// bike
+.bike {
+    margin-bottom: 150px;
+
+    &__inner {
+    display: flex;   
+    justify-content: space-between; 
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 77.45px;
+        color: #131313;
+
+        margin-bottom: 5px;
+        margin-top: 68px;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 38.73px;
+        color: #6F6F6F;
+
+        margin-bottom: 60px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16.8px;
+        color: #131313;
+
+        max-width: 420px;
+
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        display: inline-block;
+        
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24.2px;
+        color: #FFFFFF;
+        letter-spacing: 1.1em;
+        text-transform: uppercase;
+
+        background: #131313;
+        border: 0;
+
+        padding: 28px 70px;
+        margin-top: 70px;
+
+        transition: all 0.3s;
+
+        &:hover {
+            background: #ff4040;
+        }
+    }
+
+    &__block-slider{
+        flex-basis: 630px;
+        margin-left: 30px;
+        max-width: 630px;
+        
+    }
+}
+
+.bike__slider .slick-dots {
+    right: 0;
+    top: 50px;
+}
+
+.slick-dots {
+    position: absolute;
+}
+
+.slick-dots li + li {
+    padding-top: 10px;
+}
+
+.slick-dots button {
+    font-size: 0;
+    padding: 0;
+    border: none;
+    background-color: #131313;
+    width: 2px;
+    height: 25px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+    background-color: #ff4040;
+    }
+}
+
+.slick-active button {
+    background-color: #ff4040;
+}
+
+.bike__list {
+    display: flex;
+    justify-content: space-around;
+
+    margin-top: 25px;
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 160px;
+        min-height: 58px;
+    }
+
+    &-text {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: #131313;
+        margin: auto 0;
+    }
+
+    &-descr {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        text-transform: lowercase;
+    }
+}
+
+// info
+
+.info {
+    margin-bottom: 150px;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__img {
+        margin-right: 60px;
+
+        max-width: 570px;
+        object-fit: cover;
+    }
+
+    &__item {
+       
+
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__item-title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #131313;
+
+        margin-bottom: 10px;
+        max-width: 490px;
+    }
+
+    &__item-descr {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16.8px;
+
+        max-width: 450px;
+    }
+}
+
+// characters
+.characters {
+    margin-bottom: 150px;
+
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #131313;
+
+        margin-bottom: 40px;
+    }
+    &__inner {
+        display: flex;
+    }
+
+    &__text {
+        min-width: 570px;
+        margin-right: 60px;
+    }
+
+    &__list + &__list {
+        margin-top: 32px;
+    }
+    
+
+    &__list-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    
+    background-color: #131313;
+
+    padding: 3px 0 3px 1px;
+    margin-bottom: 10px;
+    }
+
+    &__list-text {
+        display: flex;
+        padding-bottom: 5px;
+    }
+
+    &__img {
+        align-self: center;
+    }
+    
+    &__list-name {
+        flex-basis: 285px;
+        padding-right: 20px;
+    }
+
+    &__list-descr {
+        flex-basis: 285px;
+    }
+}
+
+// slider
+.slider {
+    margin-bottom: 50px;
+
+    &__items .slick-dots {
+        top: 0;
+    }
+
+    &__img {
+        padding-left: 50px;
+        min-width: 1200px;
+        min-height: 632px;
+        object-fit: cover;
+    }
+}
+
+// price
+.price {
+    margin-bottom: 100px;
+
+    &__inner {
+        display: flex;
+        position: relative;
+    }
+}
+
+.form {
+
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+        color: #131313;
+
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        max-width: 298px;
+        margin-bottom: 30px;
+    }
+
+    &__text-choose {
+        color: #6F6F6F;
+        opacity: 0.5;
+
+        margin-bottom: 10px;
+    }
+
+    &__input-name,
+    &__input-tel {
+        display: block;
+
+        padding: 10px 0 10px;
+        margin-bottom: 20px;
+        min-width: 420px;
+
+        outline: none;
+
+        border: 0;
+        border-bottom: 1px solid #131313;
+    
+        &::placeholder {
+        color: #6F6F6F;
+
+        opacity: 0.5;
+        }
+    }
+
+    &__radio-style {
+        width: 80px;
+        height: 12px;
+        border-radius: 30px;
+
+        &--grey {
+            background: #6F6F6F;
+        }
+        &--white {
+            background: #ffffff;
+            border: 1px solid #6F6F6F;
+        }
+        &--red {
+            background: #FF4040;
+        }
+    }
+    &__label-box {
+        display: flex;
+    }
+
+    &__label {
+        margin-right: 23px;
+    }
+    &__input-radio {
+        position: absolute;
+        width: 1;
+        height: 1;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+
+    }
+    &__bike {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    &__button {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24.2px;
+        color: #FFFFFF;
+        letter-spacing: 1.1em;
+        text-transform: uppercase;
+
+        background: #131313;
+
+        padding: 28px 70px;
+        margin-top: 70px;  
+
+        border: 0;
+        
+        cursor: pointer;
+
+        transition: all 0.3s;
+
+        &:hover {
+            background: #ff4040;
+        }
+    }
+}
+
+.form__input-radio:checked + .form__bike{
+    display: block;
+}
+
+.form__bike-price {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+
+    width: 220px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #ff4040;
+    border-radius: 50%;
+
+    transform: translatex(-50%);
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        top: 12px;
+        left: 0;
+
+        width: 220px;
+        height: 100px;
+        border: 1px solid #ff4040;
+        border-radius: 50%;
+    }
+}
+
+// footer
+.footer {
+    background-color: #131313;
+    
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    }
+
+    &__politics {
+        color: #FFFFFF;
+        text-transform: lowercase;
+        text-decoration: underline;
+
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    &__social-link:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__contacts {
+        font-size: 12px;
+        line-height: 15px;
+        color: #FFFFFF;
+    }
+
+
+    &__contact-link {
+        display: flex;
+        align-items: center;
+    }
+    &__contact-link + &__contact-link {
+        margin-top: 10px;
+    }
+
+    &__contacts-img {
+        margin-right: 10px;
+    }
+
+}
+
+// media===========================
+
+@media (max-width:1240px) {
+    .info {
+        margin-bottom: 90px;
+    }
+
+    .characters {
+        margin-bottom: 50px;
+    }
+    
+    .characters__title {
+        text-align: center;
+    }
+    .characters__img {
+        margin-bottom: 20px;
+    }
+
+    .characters__text {
+        margin: 0 auto;
+    }
+    
+    .characters__inner {
+        flex-direction: column-reverse;
+    }
+    .slider {
+        height: 630px;
+    }
+}
+
+@media (max-width: 1110px) {
+    .header__inner {
+        margin-bottom: 40px;
+    }
+
+    .bike {
+        margin-bottom: 50px;
+    }
+    
+    .bike__inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bike__title {
+        margin-top: 0;
+    }
+    
+    .info__img {
+        margin-right: 20px;
+    }
+
+    .characters {
+        margin-bottom: 80px;
+    }
+
+    .slider__img {
+        object-fit: cover;
+        min-width: 0;
+        min-height: 0;
+    }
+    .slider {
+        margin-bottom: 50px;
+        height: 525px;
+    }
+    
+    .form__bike-img {
+        
+        width: 450px;
+        left: -506px;
+        right: auto;
+        top : 40px
+    }
+   
+}
+
+@media (max-width: 991px) {
+    .menu {
+        margin-right: 0;
+    }
+    .info__img {
+        display: none;
+    }
+    .bike__block-slider {
+        flex-basis: 530px;
+    }
+    .bike__text {
+        max-width: 420px;
+    }
+    .info__item {
+        flex-basis: 100%
+    }
+    .info__item-descr {
+        max-width: 100%;
+    }
+
+    .form__button {
+        margin-top: 320px;
+    }
+
+    .slider {
+        margin-bottom: 20px;
+        height: auto;
+    }
+
+    .form__bike {
+        right: auto;
+        left: 1px;
+        top: auto;
+        bottom: 92px;
+    }
+    .form__bike-price {
+        top: 13px;
+        left: auto;
+        right: -194px;
+        bottom: auto;
+    }
+    .price {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 690px) {
+    .bike__title {
+        font-size: 45px;
+    }
+    .bike__subtitle {
+        font-size: 25px;
+    }
+    .bike__link {
+        margin-top: 40px;
+        padding: 20px 42px;
+    }
+    .bike__list {
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+    .bike__list-item {
+        flex-basis: 50%;
+    }
+    .bike__block {
+        margin-left: 0;
+        text-align: center;
+        max-width: 480px;
+    }
+
+    .characters__img {
+        max-width: 100%;
+    }
+    
+    .characters__text {
+        min-width: 285px;
+    }
+    
+    .info__item {
+        margin-bottom: 15px;
+    }
+
+    .form__button {
+        padding: 20px 42px;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .header__inner {
+        display: block;
+        text-align: center;
+    }
+
+    .menu {
+        margin-right: 0;
+        margin-top: 40px;
+        text-align: center;
+
+        &__list {
+            justify-content: space-evenly;
+        }
+
+        &__item:not(:last-child) {
+            margin-right: 0;
+        }
+
+        &__link {
+            padding: 15px 20px;
+        }
+    }
+    .bike__block-slider {
+        flex-basis: 420px;
+    }
+
+    .form__bike-price {
+        top: -1px;
+        left: auto;
+        right: 176px;
+        bottom: auto;
+
+        font-size: 20px;
+
+        border: 0;
+
+        &::after {
+            top: 12px;
+            left: 0;
+            width: 171px;
+            height: 73px;
+        }
+    }
+    .footer__inner {
+        display: block;
+        height: auto;
+        text-align: center;
+    }
+
+    .footer__politics {
+        padding: 15px 0;
+    }
+
+    .footer__social {
+        padding: 15px 0;
+    }
+
+    .footer__contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 515px) {
+    .slick-dots {
+        display: none !important;
+    }
+
+    .bike__slider {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .slider__img {
+        padding-left: 0px;
+    }
+    .form__bike-img {
+        width: 365px;
+    }
+
+    .form__bike-price {
+        top: -59px;
+        left: auto;
+        right: 84px;
+        bottom: auto;
+
+    }
+
+
+}
+
+
+@media (max-width: 460px) {
+    .menu__list {
+        justify-content: space-between ;
+}
+    .menu__link {
+        padding: 15px 0;
+}
+    .bike__link {
+        padding: 20px 10px;
+    }
+
+    .form__button {
+        padding: 20px 10px;
+    }
+    .form__bike-img {
+        width: 290px;
+    }
+
+    .form__bike-price {
+        top: -89px;
+        left: auto;
+        right: 8px;
+        bottom: auto;
+    }
+}
+    
+@media (max-width: 350px) {
+    .menu {
+        margin-top: 40px;
+    }
+    .menu__link {
+        font-size: 12px;
+    }  
+}
+     
